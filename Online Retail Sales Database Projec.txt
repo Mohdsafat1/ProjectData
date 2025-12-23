@@ -1,0 +1,94 @@
+Online Retail Sales Database Project Report
+1. Introduction
+
+This project involves the design and implementation of a normalized Online Retail Sales Database using MySQL. The system is intended to support an e-commerce platform by managing customer details, product information, orders, payments, and sales reporting in a structured and efficient manner.
+
+2. Objective
+
+The main objective of this project is to design a relational database that:
+
+Stores retail sales data efficiently
+
+Follows proper database normalization (up to 3NF)
+
+Maintains data integrity using keys and constraints
+
+Generates meaningful sales reports using SQL views and JOIN queries
+
+3. Scope of the Project
+
+The scope of this project includes:
+
+Identifying core business entities
+
+Designing an ER diagram
+
+Creating tables using MySQL DDL statements
+
+Inserting sample data
+
+Writing SQL queries for reporting and analysis
+
+4. Tools and Technologies Used
+
+Database: MySQL 8.0
+
+Modeling Tool: dbdiagram.io
+
+Language: SQL
+
+5. Entity Identification
+
+In this project, the following key entities were clearly identified and designed as required:
+
+Products: Stores information about items available for sale, including product name, price, stock, and creation date.
+
+Customers: Stores customer-related details such as name, email, phone number, and registration date.
+
+Orders: Represents purchase orders placed by customers, including order date and order status.
+
+Payments: Stores payment details related to each order, such as payment amount, payment date, and payment method.
+
+To properly manage the many-to-many relationship between Orders and Products, an additional associative entity Order_Items was introduced. This table stores quantity and price details for each product within an order and helps maintain database normalization.
+
+6. ER Diagram Design
+
+An ER diagram was designed using dbdiagram.io to visually represent relationships between entities. The design follows a one-to-many relationship between Customers and Orders, and between Orders and Order_Items.
+
+7. Database Normalization
+
+The database schema is normalized up to Third Normal Form (3NF):
+
+1NF: No repeating groups or multivalued attributes
+
+2NF: No partial dependency on composite keys
+
+3NF: No transitive dependency
+
+This ensures reduced redundancy and improved data consistency.
+
+8. Database Schema Description
+
+Primary keys uniquely identify each record, while foreign keys maintain referential integrity between related tables. Constraints such as NOT NULL and UNIQUE are used where required.
+
+9. Sample Data Insertion
+
+Sample records were inserted into each table to test the schema and verify relationships between entities.
+
+10. Sales Reporting Using Views
+
+A SQL view named Sales_Report was created to generate order-wise sales summaries. The view combines Customers, Orders, and Order_Items tables using JOIN operations and calculates total sales using aggregate functions.
+
+11. Advantages of the System
+
+Structured and scalable database design
+
+Easy generation of sales reports
+
+Reduced data redundancy
+
+Improved query performance and readability
+
+12. Conclusion
+
+The Online Retail Sales Database project successfully demonstrates practical implementation of relational database concepts using MySQL. The system is efficient, normalized, and suitable for real-world e-commerce applications.
