@@ -89,3 +89,8 @@ JOIN Customers c ON o.customer_id = c.customer_id
 JOIN Order_Items oi ON o.order_id = oi.order_id
 GROUP BY o.order_id, c.name, o.order_date;
 
+SELECT * FROM Sales_Report;
+SELECT * FROM Customers;
+SELECT * FROM Products ;
+SELECT * FROM Orders;
+SELECT * FROM Payments;
